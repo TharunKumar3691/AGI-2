@@ -1,0 +1,10 @@
+# Kaggle credentials - never commit
+.kaggle/
+kaggle.json
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
