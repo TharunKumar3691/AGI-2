@@ -1,0 +1,15 @@
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2025.9.7: Fast Qwen3 patching. Transformers: 4.55.4.
+   \\   /|    NVIDIA L4. Num GPUs = 1. Max memory: 22.034 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.8.0+cu128. CUDA: 8.9. CUDA Toolkit: 12.8. Triton: 3.4.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.32.post2. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:50<00:50, 50.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:21<00:00, 39.02s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:21<00:00, 40.72s/it]
+Unsloth 2025.9.7 patched 36 layers with 36 QKV layers, 36 O layers and 36 MLP layers.
+Unsloth: Training embed_tokens in mixed precision to save VRAM
+Unsloth: Training lm_head in mixed precision to save VRAM
+[gpu0 03:26:07] model ready in 268s; tokens digit=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] nl=10 eos=15 pad=13 user=[14, 11, 10] mid=[15, 14, 12, 10]
+[gpu0 03:59:13] 3e6067c3 {'budget': 1863, 'n_train': 128, 'steps': 128, 'loss': 0.00024, 't_train': 290, 't_dec': 1493, 't_score': 203, 'total': 1986, 'n_aug': [24, 24], 'n_cand': [17, 20], 'mem_gb': 13.7}
+[gpu0 03:59:13] finished 1 tasks

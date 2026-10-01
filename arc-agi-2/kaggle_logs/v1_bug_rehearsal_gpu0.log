@@ -1,0 +1,1140 @@
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+==((====))==  Unsloth 2025.9.7: Fast Qwen3 patching. Transformers: 4.55.4.
+   \\   /|    NVIDIA L4. Num GPUs = 1. Max memory: 22.034 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.8.0+cu128. CUDA: 8.9. CUDA Toolkit: 12.8. Triton: 3.4.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.32.post2. FA2 = True]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:32<00:32, 32.75s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:47<00:00, 22.25s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:47<00:00, 23.82s/it]
+Unsloth 2025.9.7 patched 36 layers with 36 QKV layers, 36 O layers and 36 MLP layers.
+Unsloth: Training embed_tokens in mixed precision to save VRAM
+Unsloth: Training lm_head in mixed precision to save VRAM
+[gpu0 02:59:04] model ready in 142s; tokens digit=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] nl=10 eos=15 pad=13 user=[14, 11, 10] mid=[15, 14, 12, 10]
+[gpu0 03:05:29] d8e07eb2 {'budget': 234, 'n_train': 16, 'steps': 16, 'loss': 0.0149, 't_train': 104, 't_dec': 281, 't_score': 0, 'total': 385, 'n_aug': [4, 4], 'n_cand': [1, 0], 'mem_gb': 12.7}
+[gpu0 03:05:30] e87109e9 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:30] e87109e9 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:31] 71e489b6 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:31] 71e489b6 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:31] 4c416de3 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:32] 4c416de3 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:32] 9385bd28 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:33] 9385bd28 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:33] 80a900e0 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:34] 80a900e0 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:34] 35ab12c3 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:35] 35ab12c3 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:35] db695cfb first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:36] db695cfb FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:36] 0934a4d8 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:37] 0934a4d8 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:37] 1818057f first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:38] 1818057f FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:38] 898e7135 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:38] 898e7135 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:39] d35bdbdc first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:39] d35bdbdc FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:40] 2ba387bc first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:40] 2ba387bc FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:41] 409aa875 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:41] 409aa875 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:42] 67e490f4 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:42] 67e490f4 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:43] 3a25b0d8 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:43] 3a25b0d8 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:44] a6f40cea first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:44] a6f40cea FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:45] f931b4a8 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:45] f931b4a8 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:46] 31f7f899 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:46] 31f7f899 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:47] 8f3a5a89 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:47] 8f3a5a89 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:48] 6ffbe589 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:48] 6ffbe589 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:49] 58490d8a first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:49] 58490d8a FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:49] 7b3084d4 first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:50] 7b3084d4 FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:50] bf45cf4b first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:51] bf45cf4b FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:51] 20270e3b first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:52] 20270e3b FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:52] 28a6681f first attempt failed, retrying in safe mode
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 471, in main
+    result, info = solve_task(be, tm, key, tasks[key], budget, rates, rank)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:53] 28a6681f FAILED
+s values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/kaggle/working/engine.py", line 478, in main
+    result, info = solve_task(be, tm, key, tasks[key], left, rates, rank, safe=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 268, in solve_task
+    steps, loss = ttt(be, samples, train_deadline)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/engine.py", line 97, in ttt
+    be.reset()
+  File "/kaggle/working/engine.py", line 72, in reset
+    set_peft_model_state_dict(self.model, self.init_state)   # copies values into the parameters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/usr/lib/notebooks/sorokin/pip_install_unsloth_flash_patch/peft/utils/save_and_load.py", line 414, in set_peft_model_state_dict
+    state_dict[store_key] = peft_model_state_dict[lookup_key]
+                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_model.model.model.embed_tokens.weight'
+
+[gpu0 03:05:53] finished 1 tasks

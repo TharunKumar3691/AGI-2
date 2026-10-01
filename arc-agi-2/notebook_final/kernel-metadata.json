@@ -1,0 +1,23 @@
+{
+  "id": "tharunkumar369/arc-agi-2-adaptive-ttt-solver",
+  "title": "ARC-AGI-2 Adaptive TTT Solver",
+  "code_file": "arc-agi-2-adaptive-ttt-solver.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-2"
+  ],
+  "kernel_sources": [
+    "sorokin/pip-install-unsloth-flash-patch"
+  ],
+  "model_sources": [
+    "sorokin/qwen3_4b_grids15_sft139/Transformers/bfloat16/1"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:320043e14c68293f1c946585b9257123385205a58af4b94b17d31868cae4e868",
+  "machine_shape": "NvidiaL4"
+}
